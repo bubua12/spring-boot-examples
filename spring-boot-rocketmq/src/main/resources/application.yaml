@@ -1,0 +1,15 @@
+server:
+  port: 18086
+
+spring:
+  application:
+    name: spring-boot-rocketmq
+
+rocketmq:
+  name-server: 172.25.101.24:9876
+
+  producer:
+    group: hyh-rocketmq-group
+    send-message-timeout: 3000
+    retry-times-when-send-failed: 2
+    max-message-size: 4096
