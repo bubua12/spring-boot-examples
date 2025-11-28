@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.SendResult;
 import org.springframework.util.StopWatch;
 
 import java.util.concurrent.CompletableFuture;
@@ -36,9 +37,9 @@ public class BootKafkaApplicationTests {
     void testSend() {
         StopWatch watch = new StopWatch();
         watch.start();
-        CompletableFuture[] futures = new CompletableFuture[1000000];
-        for (int i = 0; i < 1000000; i++) {
-            CompletableFuture send = kafkaTemplate.send("order5", "order.create." + i, "订单创建了：" + i);
+        CompletableFuture[] futures = new CompletableFuture[100000000];
+        for (int i = 0; i < 100000000; i++) {
+            CompletableFuture<SendResult<String, String>> send = kafkaTemplate.send("order2", "订单创建了：" + i);
             futures[i] = send;
         }
         CompletableFuture.allOf(futures).join();

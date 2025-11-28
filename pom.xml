@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-boot-kafka</module>
+        <module>spring-boot-rocketmq</module>
     </modules>
 
     <groupId>com.bubua12.boot</groupId>
