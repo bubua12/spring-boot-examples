@@ -3,8 +3,6 @@ package com.bubua12.boot.kafka.listener;
 import com.bubua12.boot.kafka.constant.KafkaConstants;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
