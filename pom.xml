@@ -9,6 +9,7 @@
         <module>spring-boot-rocketmq</module>
         <module>spring-boot-rabbitmq</module>
         <module>spring-boot-prometheus</module>
+        <module>spring-boot-websocket</module>
     </modules>
 
     <groupId>com.bubua12.boot</groupId>
